@@ -6,6 +6,9 @@ export interface CustomButtonProps {
     handleClick?:
     MouseEventHandler<HTMLButtonElement>;
     btnType?: "button" | "submit";
+    textStyles?:string;
+    rightIcon?: string;
+    isDisabled?: boolean;
 }
 
 export interface SearchManufacturerProps {
@@ -27,4 +30,11 @@ make:string;
 model:string;
 transmission:string;
 year:number;
+}
+
+
+
+export interface SignInProps {
+    login_google: string;
+    login_facebook: string;
 }

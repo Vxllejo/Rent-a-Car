@@ -1,7 +1,9 @@
+"use client";
 import { Footer, Navbar } from '@/components'
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+import { AuthContextProvider } from '@/context/AuthContext'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -18,9 +20,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="relative">
+      <AuthContextProvider>
+
         <Navbar />
         {children}
         <Footer />
+        
+      </AuthContextProvider>
       </body>
     </html>
   )
